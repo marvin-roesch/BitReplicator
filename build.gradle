@@ -76,9 +76,16 @@ configurations {
     compile.extendsFrom shade
 }
 
+repositories {
+    maven {
+        url  "http://dl.bintray.com/paleocrafter/MinecraftMods"
+    }
+}
+
 dependencies {
     shade "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     shade "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
+    deobfCompile "mod.chiselsandbits:chiselsandbits:12.8"
 }
 
 shadowJar {
