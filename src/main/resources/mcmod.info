@@ -1,0 +1,17 @@
+[
+  {
+    "modid": "bitreplicator",
+    "name": "Bit Replicator",
+    "description": "Replicate your C&B creations!",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "http://minecraft.curseforge.com/projects/bit-replicator",
+    "updateUrl": "${updateUrl}",
+    "authorList": [
+      "PaleoCrafter"
+    ],
+    "logoFile": "assets/bitreplicator/logo.png",
+    "screenshots": [],
+    "dependencies": []
+  }
+]

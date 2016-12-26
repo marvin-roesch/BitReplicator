@@ -1,0 +1,9 @@
+tile.bitreplicator.replicator.name=Bit Replicator
+
+label.bitreplicator.energy.stored=Energy Stored:
+label.bitreplicator.energy.unit=%s RF
+label.bitreplicator.trash=Delete all stored bits
+label.bitreplicator.mode.all=Mode: Empty all slots
+label.bitreplicator.mode.single=Mode: Leave one last item in all slots
+
+itemGroup.bitreplicator=Bit Replicator
