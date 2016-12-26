@@ -1,10 +1,11 @@
 {
     "1.10.2": {
         "1.0.0.0": "Addition: Bit Replicator powered by RF to automatically replicate C&B designs",
-        "1.0.0.1": "Fix: Add C&B properly as dependency"
+        "1.0.0.1": "Fix: Add C&B properly as dependency",
+        "1.0.1.0": "Addition: Recipe for the replicator\nFix: Mod no longer crashes on servers"
     },
     "homepage": "http://minecraft.curseforge.com/projects/bit-replicator",
     "promos": {
-        "1.10.2-latest": "1.0.0.1"
+        "1.10.2-latest": "1.0.1.0"
     }
 }
