@@ -6,7 +6,7 @@ import de.mineformers.bitreplicator.block.Replicator
 import de.mineformers.bitreplicator.block.ReplicatorContainer
 import de.mineformers.bitreplicator.network.ReplicatorMode
 import de.mineformers.bitreplicator.network.TrashBits
-import de.mineformers.bitreplicator.util.getLocale
+import de.mineformers.bitreplicator.client.getLocale
 import mod.chiselsandbits.bitbag.GuiIconButton
 import mod.chiselsandbits.core.ClientSide
 import net.minecraft.client.Minecraft
@@ -94,7 +94,7 @@ class ReplicatorGui(private val playerInventory: InventoryPlayer, private val in
 
     override fun drawGuiContainerForegroundLayer(mouseX: Int, mouseY: Int) {
         BitReplicator.ClientProxy.slotFontRenderer.bypass = true
-        this.fontRendererObj.drawString("Bit Replicator", 57, 5, 0x404040)
+        this.fontRendererObj.drawString(I18n.format("tile.$MODID.replicator.name"), 57, 5, 0x404040)
         this.fontRendererObj.drawString(playerInventory.displayName.unformattedText, 57, this.ySize - 93, 0x404040)
         val localX = mouseX - (this.width - this.xSize) / 2
         val localY = mouseY - (this.height - this.ySize) / 2

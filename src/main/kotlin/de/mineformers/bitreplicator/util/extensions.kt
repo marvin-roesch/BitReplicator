@@ -2,17 +2,11 @@
 
 package de.mineformers.bitreplicator.util
 
-import net.minecraft.client.Minecraft
-import net.minecraft.client.resources.Language
 import net.minecraft.entity.player.EntityPlayerMP
-import net.minecraft.item.Item
 import net.minecraft.item.ItemStack
 import net.minecraft.nbt.NBTTagCompound
 import net.minecraft.tileentity.TileEntity
-import net.minecraft.util.ResourceLocation
 import net.minecraft.world.WorldServer
-import net.minecraftforge.fml.relauncher.ReflectionHelper
-import java.util.*
 
 /**
  * Synchronizes a tile entity to all clients interested, using its update packet.
@@ -27,14 +21,6 @@ fun TileEntity.sync() {
     for (player in world.playerEntities)
         if (manager.isPlayerWatchingChunk(player as EntityPlayerMP, pos.x shr 4, pos.z shr 4))
             player.connection.sendPacket(packet)
-}
-
-private val regionField = ReflectionHelper.findField(Language::class.java, "field_135037_b", "region")
-
-fun Minecraft.getLocale(): Locale {
-    val language = this.languageManager.currentLanguage
-    regionField.isAccessible = true
-    return Locale(language.languageCode, regionField.get(language) as String)
 }
 
 fun ItemStack.writeToNBTWithIntSize(nbt: NBTTagCompound): NBTTagCompound {

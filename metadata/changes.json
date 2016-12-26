@@ -1,9 +1,10 @@
 {
   "additions": [
+    "Recipe for the replicator"
   ],
   "changes": [
   ],
   "fixes": [
-    "Add C&B properly as dependency"
+    "Mod no longer crashes on servers"
   ]
 }

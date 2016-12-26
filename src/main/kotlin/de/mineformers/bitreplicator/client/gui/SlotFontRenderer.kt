@@ -1,6 +1,6 @@
 package de.mineformers.bitreplicator.client.gui
 
-import de.mineformers.bitreplicator.util.getLocale
+import de.mineformers.bitreplicator.client.getLocale
 import net.minecraft.client.Minecraft
 import net.minecraft.client.gui.FontRenderer
 import net.minecraft.util.ResourceLocation

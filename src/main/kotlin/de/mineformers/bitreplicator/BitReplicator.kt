@@ -6,6 +6,7 @@ import de.mineformers.bitreplicator.client.gui.SlotFontRenderer
 import de.mineformers.bitreplicator.network.GuiHandler
 import de.mineformers.bitreplicator.network.ReplicatorMode
 import de.mineformers.bitreplicator.network.TrashBits
+import mod.chiselsandbits.core.ChiselsAndBits
 import net.minecraft.block.Block
 import net.minecraft.client.Minecraft
 import net.minecraft.client.renderer.block.model.ModelResourceLocation
@@ -14,6 +15,7 @@ import net.minecraft.client.resources.IReloadableResourceManager
 import net.minecraft.creativetab.CreativeTabs
 import net.minecraft.item.Item
 import net.minecraft.item.ItemBlock
+import net.minecraft.item.ItemStack
 import net.minecraft.util.ResourceLocation
 import net.minecraftforge.client.event.TextureStitchEvent
 import net.minecraftforge.client.model.ModelLoader
@@ -96,7 +98,13 @@ object BitReplicator {
     @EventHandler
     fun init(event: FMLInitializationEvent) {
         LOG.info("Adding recipes...")
-
+        GameRegistry.addShapedRecipe(ItemStack(Blocks.REPLICATOR),
+                                     "ici",
+                                     "ibi",
+                                     "iii",
+                                     'i', ItemStack(VItems.IRON_INGOT),
+                                     'c', ItemStack(ChiselsAndBits.getItems().itemChiselDiamond),
+                                     'b', ItemStack(ChiselsAndBits.getItems().itemBitBag))
         PROXY.init(event)
     }
 
